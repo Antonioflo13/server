@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
-        
-    </div>
+    <main id="app">
+        <section v-for="student in students">
+            <h4>{{student.surname}}</h4>
+            <h4>{{student.name}}</h4>
+            <h4> {{student.id}}</h4>
+            <h4>{{student.date}}</h4>
+            <h4>{{student.registration_number}}</h4>
+            <h4>{{student.vote}}</h4>
+        </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/script.js"></script>
 </body>

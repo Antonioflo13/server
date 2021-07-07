@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
-      
+      students: [],
     },
     
     created() {
@@ -9,7 +9,7 @@ var app = new Vue({
             .get("http://localhost:8888/server/")
             .then(
                 (response)=> {
-                    console.log(response);
+                    this.students = response.data;
                 }
             )
     }

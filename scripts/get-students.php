@@ -1,7 +1,7 @@
 <?php 
     require_once __DIR__ . "/database.php";
 
-    $sql = "SELECT * 
+    $sql = "SELECT * , `students`.`name` AS 'name'
     FROM `students`
     INNER JOIN `degrees`
     ON `students`.`degree_id`=`degrees`.`id`
@@ -11,7 +11,7 @@
     while($row = $result->fetch_assoc()) {
         $students[] = $row;
     }
-    var_dump($students);
+    header('Content-Type: application/json');
     echo json_encode($students);
 
 ?>
